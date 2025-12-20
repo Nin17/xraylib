@@ -4,7 +4,7 @@ authors = [
     {name="Tom Schoonjans", email="Tom.Schoonjans@gmail.com"}
 ]
 description = "pip-installable xraylib"
-requires-python = "~=3.8"
+requires-python = ">=3.10"
 readme = "README.md"
 classifiers = [
     "Intended Audience :: Developers",
@@ -36,10 +36,9 @@ setup = [
 install = ['--tags=python-runtime']
 
 [tool.cibuildwheel]
-skip = ["*-win32", "*-manylinux_i686", "pp*", "*musllinux*"]
+skip = ["*-win32", "*-manylinux_i686", "pp*", "*musllinux*", "cp38-*", "cp39-*"]
 build-verbosity = 1
 test-command = [
   'python -c "import xraylib"',
   'python -c "import xraylib_np"',
 ]
-test-skip = "cp38-macosx_*:arm64"
