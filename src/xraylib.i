@@ -68,7 +68,11 @@ XRL_GNUC_BEGIN_IGNORE_DEPRECATIONS
 
 #ifdef SWIGPYTHON
 %init %{
+#if SWIG_VERSION >= 0x040400 // SWIG >= 4.4.0
+    import_array1(-1);
+#else
     import_array();
+#endif
 %}
 #endif
 
