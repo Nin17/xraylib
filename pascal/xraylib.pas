@@ -47,7 +47,7 @@ const
 // From xraylib.h
 const
   XRAYLIB_MAJOR = 4;
-  XRAYLIB_MINOR = 1;
+  XRAYLIB_MINOR = 2;
   XRAYLIB_MICRO = 1;
 
 procedure XRayInit;cdecl;external External_library name 'XRayInit';

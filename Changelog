@@ -1,3 +1,8 @@
+Version 4.2.1 Tom Schoonjans
+
+- Fix Python bindings compilation with recent clang and swig
+- Build Python 3.10+ wheels only (drop Python 3.8 and 3.9 support). Now also add linux aarch64 wheel support
+
 Version 4.2.0 Tom Schoonjans
 
 - Java: update dependency from Commons Math3 to Commons Numbers Complex 1.2
